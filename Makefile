@@ -4,8 +4,8 @@ build:
 
 .PHONY: update
 update:
-	scp -i "$(HOME)/.key/ssh-key-frigo-server.key" "webserver" ubuntu@144.22.210.65:/home/ubuntu/
-	scp -r -i "$(HOME)/.key/ssh-key-frigo-server.key" "static" ubuntu@144.22.210.65:/home/ubuntu/
+	./update-server.sh "webserver"
+	./update-server.sh "static"
 
 .PHONY: clear
 clear:
